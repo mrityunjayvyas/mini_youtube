@@ -1,9 +1,9 @@
 /* eslint-disable no-redeclare */
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./VideoCard.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
 const VideoCard = (props) => {

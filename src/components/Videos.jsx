@@ -11,6 +11,17 @@ const Videos = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
+    const fetchData = async () => {
+      const url = `http://localhost:5000/video?categoryId=${categoryId}`;
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        console.log(json);
+        setVideos(json);
+      } catch (error) {
+        console.log("error", error);
+      }
+    };
     fetchData();
   }, [categoryId]);
 
